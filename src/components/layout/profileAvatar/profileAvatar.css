@@ -1,0 +1,36 @@
+/* src/components/ui/ProfileAvatar.css */
+.profile-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    user-select: none;
+  }
+  
+  .avatar-small {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+  
+  .avatar-medium {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+  
+  .avatar-large {
+    width: 80px;
+    height: 80px;
+    font-size: 32px;
+  }
+  
+  .avatar-xlarge {
+    width: 120px;
+    height: 120px;
+    font-size: 48px;
+  }

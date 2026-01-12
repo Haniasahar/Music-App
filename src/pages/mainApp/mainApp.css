@@ -1,0 +1,219 @@
+/* src/pages/MainApp.css */
+.main-app-container {
+    display: flex;
+    min-height: 100vh;
+    background: #121212;
+    color: white;
+  }
+  
+  .main-app-container.kid-mode {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  
+  .main-content {
+    flex: 1;
+    margin-left: 240px; /* Sidebar width */
+    padding-bottom: 80px; /* Player height */
+  }
+  
+  /* Header */
+  .main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 32px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .user-info h3 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .user-age-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: #1DB954;
+    background: rgba(29, 185, 84, 0.1);
+    padding: 4px 10px;
+    border-radius: 12px;
+    margin-top: 4px;
+  }
+  
+  .header-actions {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .parental-controls-btn,
+  .logout-btn {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .parental-controls-btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+  
+  .parental-controls-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .logout-btn {
+    background: rgba(255, 68, 68, 0.1);
+    color: #ff4444;
+  }
+  
+  .logout-btn:hover {
+    background: rgba(255, 68, 68, 0.2);
+  }
+  
+  /* Welcome Banner */
+  .welcome-banner {
+    margin: 0 32px 24px;
+    padding: 16px 24px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    animation: slideDown 0.5s ease;
+  }
+  
+  .welcome-banner.kid {
+    background: linear-gradient(90deg, #4ECDC4, #06D6A0);
+  }
+  
+  .welcome-banner.adult {
+    background: linear-gradient(90deg, #667eea, #764ba2);
+  }
+  
+  .welcome-banner svg {
+    font-size: 24px;
+  }
+  
+  /* Parental Controls */
+  .parental-controls-panel {
+    margin: 0 32px 24px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    border-left: 4px solid #1DB954;
+  }
+  
+  .parental-controls-panel h3 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    font-size: 18px;
+  }
+  
+  .control-option {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .control-option input[type="checkbox"] {
+    margin-right: 8px;
+  }
+  
+  .control-option label {
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .control-option p {
+    font-size: 14px;
+    color: #b3b3b3;
+    margin-left: 24px;
+  }
+  
+  /* Content Area */
+  .content-area {
+    padding: 0 32px 32px;
+  }
+  
+  .search-view,
+  .history-view,
+  .favorites-view {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    padding: 32px;
+    min-height: 400px;
+  }
+  
+  .search-view h2,
+  .history-view h2,
+  .favorites-view h2 {
+    font-size: 28px;
+    margin-bottom: 24px;
+    font-weight: 700;
+  }
+  
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .main-content {
+      margin-left: 80px;
+    }
+    
+    .main-header {
+      padding: 16px 20px;
+    }
+    
+    .content-area {
+      padding: 0 20px 20px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .main-content {
+      margin-left: 0;
+      padding-bottom: 140px; /* Extra space for mobile player */
+    }
+    
+    .main-header {
+      flex-direction: column;
+      gap: 16px;
+      padding: 16px;
+    }
+    
+    .header-actions {
+      width: 100%;
+      justify-content: space-between;
+    }
+    
+    .welcome-banner,
+    .parental-controls-panel,
+    .content-area {
+      margin: 0 16px 16px;
+    }
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

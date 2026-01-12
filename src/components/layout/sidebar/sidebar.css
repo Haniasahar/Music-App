@@ -1,0 +1,338 @@
+/* src/components/layout/Sidebar.css */
+.sidebar {
+    width: 240px;
+    background: linear-gradient(180deg, #121212 0%, #000000 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    border-right: 1px solid #282828;
+  }
+  
+  .user-profile-section {
+    padding: 24px 20px;
+    border-bottom: 1px solid #282828;
+  }
+  
+  .user-avatar {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 12px;
+  }
+  
+  .user-info h3 {
+    font-size: 16px;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .user-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: #b3b3b3;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 4px 8px;
+    border-radius: 12px;
+    width: fit-content;
+  }
+  
+  .sidebar-nav {
+    padding: 20px 0;
+    flex: 1;
+  }
+  
+  .sidebar-nav ul {
+    list-style: none;
+  }
+  
+  .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 20px;
+    color: #b3b3b3;
+    text-decoration: none;
+    transition: all 0.3s;
+    border-left: 3px solid transparent;
+  }
+  
+  .nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+  
+  .nav-link.active {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-left-color: #1DB954;
+  }
+  
+  .nav-icon {
+    font-size: 20px;
+    width: 24px;
+  }
+  
+  .nav-label {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .playlists-section {
+    padding: 20px;
+    border-top: 1px solid #282828;
+    overflow-y: auto;
+    max-height: 300px;
+  }
+  
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .section-header h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #b3b3b3;
+  }
+  
+  .add-playlist-btn {
+    background: none;
+    border: none;
+    color: #b3b3b3;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 50%;
+    transition: all 0.3s;
+  }
+  
+  .add-playlist-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transform: rotate(90deg);
+  }
+  
+  .create-playlist-input {
+    margin-bottom: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 12px;
+    animation: slideDown 0.3s ease;
+  }
+  
+  .create-playlist-input input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    padding: 8px 12px;
+    color: white;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  
+  .create-playlist-input input:focus {
+    outline: none;
+    border-color: #1DB954;
+  }
+  
+  .playlist-actions {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .playlist-actions button {
+    flex: 1;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .playlist-actions button:first-child {
+    background: #1DB954;
+    color: white;
+  }
+  
+  .playlist-actions button:first-child:hover {
+    background: #1aa34a;
+  }
+  
+  .playlist-actions button:last-child {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+  
+  .playlist-actions button:last-child:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .playlists-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .playlist-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 0;
+    position: relative;
+  }
+  
+  .playlist-link {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    color: #b3b3b3;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  
+  .playlist-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+  
+  .playlist-link.active {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+  
+  .playlist-link svg {
+    font-size: 16px;
+    color: #b3b3b3;
+  }
+  
+  .playlist-name {
+    flex: 1;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .playlist-count {
+    font-size: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2px 8px;
+    border-radius: 10px;
+    min-width: 24px;
+    text-align: center;
+  }
+  
+  .delete-playlist-btn {
+    opacity: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    position: absolute;
+    right: 8px;
+  }
+  
+  .playlist-item:hover .delete-playlist-btn {
+    opacity: 1;
+  }
+  
+  .delete-playlist-btn:hover {
+    background: #ff4444;
+    transform: scale(1.1);
+  }
+  
+  .sidebar-footer {
+    padding: 20px;
+    border-top: 1px solid #282828;
+  }
+  
+  .settings-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.3s;
+  }
+  
+  .settings-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+  
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 70px;
+    }
+    
+    .user-info h3,
+    .nav-label,
+    .playlist-name,
+    .playlist-count,
+    .settings-link span {
+      display: none;
+    }
+    
+    .user-avatar {
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+    }
+    
+    .nav-link,
+    .playlist-link {
+      justify-content: center;
+      padding: 12px;
+    }
+    
+    .playlist-link svg {
+      margin: 0;
+    }
+  }
